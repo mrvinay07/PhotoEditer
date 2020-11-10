@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teamvinay.newphotoediter">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+
+        <activity android:theme="@style/AppTheme"
+            android:name="com.teamvinay.newphotoediter.ui.main.activity.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme"
+            android:name="com.teamvinay.newphotoediter.ui.main.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.teamvinay.newphotoediter.ui.main.activity.EditImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.teamvinay.newphotoediter.featuresfoto.picker.PhotoPickerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.teamvinay.newphotoediter.featuresfoto.picker.PhotoPagerActivity"
+            android:screenOrientation="portrait"/>
+       <!-- <activity android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.teamvinay.newphotoediter.ui.main.activity.PuzzleViewActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.teamvinay.newphotoediter.featuresfoto.puzzle.photopicker.activity.PickImageActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.teamvinay.newphotoediter.ui.main.activity.SaveAndShareActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.teamvinay.newphotoediter.ui.main.activity.SettingsActivity" android:screenOrientation="portrait"/>
+        <provider android:name="com.squareup.picasso.PicassoProvider" android:exported="false" android:authorities="lisa.studio.photoeditor.com.squareup.picasso"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.facebook.ads.AudienceNetworkActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <provider android:name="com.facebook.ads.AudienceNetworkContentProvider" android:exported="false" android:authorities="lisa.studio.photoeditor.AudienceNetworkContentProvider"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="2.0.1"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.android.billingclient.api.ProxyBillingActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="lisa.studio.photoeditor.firebaseinitprovider" android:initOrder="100"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <activity android:theme="@style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="lisa.studio.photoeditor.mobileadsinitprovider" android:initOrder="100"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>-->
+    </application>
+</manifest>
+
+

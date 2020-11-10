@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/basic_white" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/layoutRoot" android:layout_width="match_parent" android:layout_height="80dp">
+        <ImageView android:layout_gravity="center" android:id="@+id/icon_album" android:padding="3dp" android:layout_width="80dp" android:layout_height="80dp" android:scaleType="centerCrop" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="3dp" android:layout_toStartOf="@+id/iconNext" android:layout_toEndOf="@+id/icon_album">
+            <TextView android:textSize="15sp" android:textColor="@color/text_color_edit" android:id="@+id/name_album" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Name album" android:maxLines="1" android:singleLine="true"/>
+            <TextView android:textSize="12sp" android:textColor="@color/text_color_edit" android:id="@+id/path_album" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="sdcard/photo/0/new" android:maxLines="1"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/iconNext" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/piclist_icon_next" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+        <View android:background="#434141" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

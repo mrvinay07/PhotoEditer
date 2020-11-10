@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fade_out_ads.xmlandroid="http://schemas.android.com/tools"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:duration="@android:integer/config_mediumAnimTime"
+    fade_out_ads.xmlandroid:fromYDelta="0"
+    android:toYDelta="50%p" />

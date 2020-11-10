@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme">
+        <item name="?0x1010u586">2</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+    <style name="Base.Theme.AppCompat">
+    </style>
+    <style name="Base.Theme.AppCompat.Light">
+    </style>
+    <style name="Base.V28.Theme.AppCompat">
+        <item name="dialogCornerRadius">?unknown_attr_ref: 1010571</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat.Light">
+        <item name="dialogCornerRadius">?unknown_attr_ref: 1010571</item>
+    </style>
+    <style name="MainDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateHidden|stateVisible|adjustResize</item>
+        <item name="?0x1010586">2</item>
+    </style>
+</resources>

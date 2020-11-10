@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamvinay.newphotoediter.featuresfoto.picker.widget.SquareItemLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"
+    android:background="@color/collage_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:layout_gravity="center"
+        android:id="@+id/iv_photo"
+        android:background="@drawable/__picker_photo_bg"
+        android:padding="1dp"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+    <ImageView android:id="@+id/v_selected" android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:layout_alignParentEnd="true"/>
+</com.teamvinay.newphotoediter.featuresfoto.picker.widget.SquareItemLayout>

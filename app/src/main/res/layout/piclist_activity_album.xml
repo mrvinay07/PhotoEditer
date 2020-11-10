@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/basic_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:theme="?attr/actionBarTheme"
+        android:id="@+id/toolbar"
+        android:background="@color/basic_white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="?attr/actionBarPopupTheme"
+        app:titleTextColor="@color/text_color_edit"/>
+    <View android:id="@+id/lineView1"
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"/>
+    <GridView android:gravity="center"
+        android:id="@+id/gridViewAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchMode="columnWidth"
+        android:numColumns="1"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_below="@+id/lineView1"/>
+    <GridView android:gravity="center"
+        android:id="@+id/gridViewListAlbum"
+        android:background="@color/basic_white"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchMode="columnWidth"
+        android:numColumns="3"
+        android:layout_above="@+id/lineView2"
+        android:layout_below="@+id/toolbar"/>
+    <View android:id="@+id/lineView2"
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/layoutBottom"/>
+    <LinearLayout android:orientation="vertical"
+        android:id="@+id/layoutBottom"
+        android:background="@color/basic_white"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true">
+        <FrameLayout android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text_color_edit"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/txtTotalImage"
+                android:padding="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_images"
+                android:layout_marginStart="3dp"/>
+            <TextView android:textSize="14sp"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/btnDone" android:background="@drawable/piclist_selector_btn_done" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="@string/text_button_done" android:paddingStart="30dp" android:paddingEnd="30dp" android:layout_marginStart="2dp" android:layout_marginEnd="5dp"/>
+        </FrameLayout>
+        <HorizontalScrollView android:id="@+id/horizontalScrollView"
+            android:background="@color/overlay_background_4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal"
+                android:id="@+id/layoutListItemSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </HorizontalScrollView>
+    </LinearLayout>
+</RelativeLayout>

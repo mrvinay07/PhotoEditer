@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/bg_card_ads" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.facebook.ads.NativeAdLayout android:orientation="vertical" android:id="@+id/native_ad_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+    <FrameLayout android:orientation="vertical" android:id="@+id/fl_adplaceholder" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+    <include layout="@layout/load_fb_adx"/>
+</LinearLayout>

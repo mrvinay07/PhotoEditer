@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1">
+        <include layout="@layout/__picker_toolbar"/>
+        <FrameLayout android:id="@+id/container"
+            android:background="@color/collage_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <fragment android:name="com.teamvinay.newphotoediter.featuresfoto.picker.fragment.ImagePagerFragment"
+                android:id="@+id/photoPagerFragment"
+                android:background="@color/collage_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+    <include android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_banner_control"/>
+</LinearLayout>

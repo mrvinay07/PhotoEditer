@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/collage_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:gravity="center"
+        android:id="@+id/rv_photos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/wrap_folder"
+        android:background="@color/basic_white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" android:elevation="20dp">
+        <ImageView android:id="@+id/directIcon"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_up"
+            android:layout_marginStart="20dp"/>
+        <TextView android:textSize="18sp"
+            android:textColor="@color/text_color_edit"
+            android:id="@+id/folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_image"
+            android:layout_marginStart="15dp"/>
+    </LinearLayout>
+</LinearLayout>
